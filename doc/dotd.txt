@@ -1,0 +1,82 @@
+*dotd.txt*  Abbreviations for inserting date and time.
+
+Author: Shinya Takemoto
+Repository: https://github.com/takemon-go/dotd
+License: MIT
+
+==============================================================================
+CONTENTS                                                         *dotd-contents*
+
+Introduction            |dotd-introduction|
+Abbreviations           |dotd-abbreviations|
+Commands                |dotd-commands|
+Variables               |dotd-variables|
+
+==============================================================================
+INTRODUCTION                                            *dotd-introduction* *dotd*
+
+dotd adds a set of abbreviations for quick inserting date and time.
+You only input `.d` and <Space>|<CR>, it is expanded to date like `2020.03.09`.
+
+==============================================================================
+ABBREVIATIONS                                            *dotd-abbreviations* *.d*
+
+dotd provides end-id type |abbreviations| for insert mode.
+>
+            .d          2020.03.09
+            ..d         12:34:56
+            ...d        2020.03.09 12:34:56
+
+            .'d         20200309
+            ..'d        123456
+            .'''d       20200309123456
+
+            ./d         2020/03/09
+            .-d         2020-03-09
+            .:d         12:34:56
+
+            ..:d        2020.03.09 12:34:56
+            ./:d        2020/03/09 12:34:56
+            .-:d        2020-03-09 12:34:56
+<
+==============================================================================
+COMMANDS                                                         *dotd-commands*
+
+:DotdNo                                                                *:DotdNo*
+            Remove abbreviations of dotd.
+
+:DotdOn                                                                *:DotdOn*
+            Add abbreviations of dotd.
+
+==============================================================================
+VARIABLES                                                       *dotd-variables*
+
+g:dotd_date_fmt                                                *g:dotd_date_fmt*
+
+            Format string of date part for |strftime()|
+            "/" is defined as separator.
+            default: "%Y/%m/%d"
+
+g:dotd_date_sep                                                *g:dotd_date_sep*
+
+            Separator for `.d` and date part of `...d`
+            default: "."
+
+g:dotd_time_fmt                                                *g:dotd_time_fmt*
+
+            Format string of time part for |strftime()|
+            ":" is defined as separator.
+            default: "%h:%M:%S"
+
+g:dotd_time_sep                                                *g:dotd_time_sep*
+
+            Separator for `..d` and time part of `...d`
+            default: ":"
+
+g:dotd_datetime_sep                                        *g:dotd_datetime_sep*
+
+            Separator between date and time for `...d`
+            default: " "
+
+==============================================================================
+vim: filetype=help expandtab textwidth=78 tabstop=8 norightleft foldenable foldlevel=0 :
