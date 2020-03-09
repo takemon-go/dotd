@@ -84,7 +84,7 @@ Add abbreviations of dotd.
 
     Format string of time part for [strftime()](http://man7.org/linux/man-pages/man3/strftime.3.html)  
     `":"` is defined as separator.  
-    default: `"%h:%M:%S"`
+    default: `"%H:%M:%S"`
 
 * `g:dotd_time_sep`
 
