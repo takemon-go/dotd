@@ -36,13 +36,13 @@ vim -u NONE -c "helptags ~/.vim/doc" -c q
 dotd provides end-id type [abbreviations](http://vimdoc.sourceforge.net/htmldoc/map.html#abbreviations) for insert mode.
 
 ```
-.d          2020.03.09
-..d         12:34:56
-...d        2020.03.09 12:34:56
+..d         2020.03.09
+...d        12:34:56
+....d       2020.03.09 12:34:56
 
 .'d         20200309
 ..'d        123456
-.'''d       20200309123456
+...'d       20200309123456
 
 ./d         2020/03/09
 .-d         2020-03-09
@@ -77,7 +77,7 @@ Add abbreviations of dotd.
 
 * `g:dotd_date_sep`
 
-    Separator for `.d` and date part of `...d`  
+    Separator for `..d` and date part of `....d`  
     default: `"."`
 
 * `g:dotd_time_fmt`
@@ -88,11 +88,11 @@ Add abbreviations of dotd.
 
 * `g:dotd_time_sep`
 
-    Separator for `..d` and time part of `...d`  
+    Separator for `...d` and time part of `....d`  
     default: `":"`
 
 * `g:dotd_datetime_sep`
 
-    Separator between date and time for `...d`  
+    Separator between date and time for `....d`  
     default: `" "`
 

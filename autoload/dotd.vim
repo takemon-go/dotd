@@ -24,13 +24,13 @@ function! dotd#datetime(date_sep, sep, time_sep)
 endfunction
 
 function! dotd#on()
-	inoreabbrev <silent> .d <C-r>=dotd#date()<CR>
-	inoreabbrev <silent> ..d <C-r>=dotd#time()<CR>
-	inoreabbrev <silent> ...d <C-r>=dotd#datetime(g:dotd_date_sep, g:dotd_datetime_sep, g:dotd_time_sep)<CR>
+	inoreabbrev <silent> ..d <C-r>=dotd#date()<CR>
+	inoreabbrev <silent> ...d <C-r>=dotd#time()<CR>
+	inoreabbrev <silent> ....d <C-r>=dotd#datetime(g:dotd_date_sep, g:dotd_datetime_sep, g:dotd_time_sep)<CR>
 
 	inoreabbrev <silent> .'d <C-r>=dotd#date("")<CR>
 	inoreabbrev <silent> ..'d <C-r>=dotd#time("")<CR>
-	inoreabbrev <silent> .'''d <C-r>=dotd#datetime("", "", "")<CR>
+	inoreabbrev <silent> ...'d <C-r>=dotd#datetime("", "", "")<CR>
 
 	inoreabbrev <silent> ./d <C-r>=dotd#date("/")<CR>
 	inoreabbrev <silent> .-d <C-r>=dotd#date("-")<CR>
@@ -42,13 +42,13 @@ function! dotd#on()
 endfunction
 
 function! dotd#off()
-	iunabbrev .d
 	iunabbrev ..d
 	iunabbrev ...d
+	iunabbrev ....d
 
 	iunabbrev .'d
 	iunabbrev ..'d
-	iunabbrev .'''d
+	iunabbrev ...'d
 
 	iunabbrev ./d
 	iunabbrev .-d

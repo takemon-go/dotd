@@ -16,20 +16,20 @@ Variables               |dotd-variables|
 INTRODUCTION                                            *dotd-introduction* *dotd*
 
 dotd adds a set of abbreviations for quick inserting date and time.
-You only input `.d` and <Space>|<CR>, it is expanded to date like `2020.03.09`.
+You only input `..d` and <Space>|<CR>, it is expanded to date like `2020.03.09`.
 
 ==============================================================================
 ABBREVIATIONS                                            *dotd-abbreviations* *.d*
 
 dotd provides end-id type |abbreviations| for insert mode.
 >
-            .d          2020.03.09
-            ..d         12:34:56
-            ...d        2020.03.09 12:34:56
+            ..d         2020.03.09
+            ...d        12:34:56
+            ....d       2020.03.09 12:34:56
 
             .'d         20200309
             ..'d        123456
-            .'''d       20200309123456
+            ...'d       20200309123456
 
             ./d         2020/03/09
             .-d         2020-03-09
@@ -59,7 +59,7 @@ g:dotd_date_fmt                                                *g:dotd_date_fmt*
 
 g:dotd_date_sep                                                *g:dotd_date_sep*
 
-            Separator for `.d` and date part of `...d`
+            Separator for `..d` and date part of `....d`
             default: "."
 
 g:dotd_time_fmt                                                *g:dotd_time_fmt*
@@ -70,12 +70,12 @@ g:dotd_time_fmt                                                *g:dotd_time_fmt*
 
 g:dotd_time_sep                                                *g:dotd_time_sep*
 
-            Separator for `..d` and time part of `...d`
+            Separator for `...d` and time part of `....d`
             default: ":"
 
 g:dotd_datetime_sep                                        *g:dotd_datetime_sep*
 
-            Separator between date and time for `...d`
+            Separator between date and time for `....d`
             default: " "
 
 ==============================================================================
