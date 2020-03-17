@@ -3,7 +3,7 @@
 ## Introduction
 
 dotd is a vim plugin which adds a set of abbreviations for quick inserting date and time.  
-You only input `.d` and `<Space>`|`<CR>`, it is expanded to date like `2020.03.09`.
+You only input `..d` and `<Space>`|`<CR>`, it is expanded to date like `2020.03.09`.
 
 ## Installation
 
